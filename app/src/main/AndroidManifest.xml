@@ -3,11 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".App"
         android:icon="@drawable/water"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Water"
         tools:targetApi="31">
+        <activity
+            android:name=".BgActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

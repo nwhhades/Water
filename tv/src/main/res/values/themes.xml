@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Base.Theme.Tv" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="Base.Theme.Tv" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/window_title</item>
         <item name="android:windowBackground">@color/window_bg</item>
         <item name="android:windowFullscreen">true</item>
@@ -16,10 +16,31 @@
         <item name="android:gravity">center</item>
         <item name="android:singleLine">true</item>
         <item name="android:ellipsize">marquee</item>
-        <item name="android:textSize">36sp</item>
+        <item name="android:textSize">20sp</item>
         <item name="android:textColor">@color/btn_text_color</item>
         <item name="android:paddingStart">60pt</item>
+        <item name="android:paddingTop">20pt</item>
+        <item name="android:paddingBottom">20pt</item>
         <item name="android:paddingEnd">60pt</item>
+    </style>
+
+    <style name="RoundedStyleShapeAppearance">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/rounded_radius</item>
+    </style>
+
+    <style name="ProgressBar" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="indicatorColor">@color/focus_focused</item>
+        <item name="trackColor">@color/focus_normal</item>
+        <item name="trackCornerRadius">@dimen/rounded_radius</item>
+        <item name="trackThickness">120pt</item>
+    </style>
+
+    <style name="CircularProgressBar" parent="Widget.Material3.CircularProgressIndicator">
+        <item name="indicatorColor">@color/focus_focused</item>
+        <item name="trackColor">@color/focus_normal</item>
+        <item name="indicatorSize">160pt</item>
+        <item name="trackThickness">10pt</item>
     </style>
 
 </resources>

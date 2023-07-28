@@ -4,45 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <cn.hades.tv.weather.TianqiView
-        android:id="@+id/tianqi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".BgActivity">
 
     <cn.hades.tv.widget.button.TvButton
         android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300pt"
-        android:text="加载弹窗"
+        android:layout_marginTop="100pt"
+        android:text="空背景"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <cn.hades.tv.widget.button.TvButton
         android:id="@+id/btn2"
-        style="@style/TvButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40pt"
-        android:text="应用背景"
-        android:theme="@style/TvButton"
+        android:text="网络背景"
         app:layout_constraintEnd_toEndOf="@id/btn1"
         app:layout_constraintStart_toStartOf="@id/btn1"
         app:layout_constraintTop_toBottomOf="@id/btn1" />
 
     <cn.hades.tv.widget.button.TvButton
         android:id="@+id/btn3"
-        style="@style/TvButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40pt"
-        android:text="应用下载"
-        android:theme="@style/TvButton"
+        android:text="资源背景"
         app:layout_constraintEnd_toEndOf="@id/btn2"
         app:layout_constraintStart_toStartOf="@id/btn2"
         app:layout_constraintTop_toBottomOf="@id/btn2" />
