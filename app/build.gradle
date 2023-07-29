@@ -15,13 +15,30 @@ android {
 
     }
 
+    signingConfigs {
+        hades {
+            storeFile file('hades.jks')
+            storePassword '88888888'
+            keyAlias 'key'
+            keyPassword '666666'
+        }
+        sys {
+            storeFile file('platform.keystore')
+            storePassword 'android'
+            keyAlias 'platform'
+            keyPassword 'android'
+        }
+    }
+
     buildTypes {
         debug {
             minifyEnabled true
+            signingConfig signingConfigs.sys
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         release {
             minifyEnabled true
+            signingConfig signingConfigs.hades
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }

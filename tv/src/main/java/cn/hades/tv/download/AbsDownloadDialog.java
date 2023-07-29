@@ -112,12 +112,6 @@ public abstract class AbsDownloadDialog extends BaseDialogFragment<FragmentDownl
     }
 
     @Override
-    public void onViewWin() {
-        Toaster.showShort("下载成功");
-        hideFragment();
-    }
-
-    @Override
     public void onViewFail(Exception e) {
         Toaster.showShort("下载出错:" + e.getMessage());
         if (viewBinding != null && isVisible()) {

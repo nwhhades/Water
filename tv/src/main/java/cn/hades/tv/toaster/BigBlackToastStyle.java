@@ -10,7 +10,7 @@ public class BigBlackToastStyle extends BlackToastStyle {
 
     @Override
     protected float getTextSize(Context context) {
-        return 36;
+        return AdaptScreenUtils.pt2Px(30);
     }
 
     @Override

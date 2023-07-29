@@ -20,7 +20,7 @@ public class DownloadDialog extends AbsDownloadDialog {
 
     private static final String TAG = "ApkDownloadDialog";
 
-    private DownloadDialog(String title, String content, String fileUrl, String fileMd5, String fileName, String filePath) {
+    public DownloadDialog(String title, String content, String fileUrl, String fileMd5, String fileName, String filePath) {
         super(title, content, fileUrl, fileMd5, fileName, filePath);
     }
 
@@ -120,7 +120,13 @@ public class DownloadDialog extends AbsDownloadDialog {
     @Override
     public void onDownWin(File file) {
         super.onDownWin(file);
-        //
+        //TODO
+    }
+
+    @Override
+    public void onViewWin() {
+        Toaster.showShort("下载成功");
+        hideFragment();
     }
 
     @SuppressWarnings("unused")
