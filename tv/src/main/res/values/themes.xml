@@ -33,7 +33,7 @@
         <item name="indicatorColor">@color/focus_focused</item>
         <item name="trackColor">@color/focus_normal</item>
         <item name="trackCornerRadius">@dimen/rounded_radius</item>
-        <item name="trackThickness">120pt</item>
+        <item name="trackThickness">30pt</item>
     </style>
 
     <style name="CircularProgressBar" parent="Widget.Material3.CircularProgressIndicator">

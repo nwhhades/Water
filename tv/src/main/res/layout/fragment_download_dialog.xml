@@ -1,15 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
     <View
+        android:id="@+id/v_bg"
         android:layout_width="1200pt"
-        android:layout_height="500pt" />
+        android:layout_height="500pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:layout_width="1200pt"
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title"
+        android:layout_width="1000pt"
         android:layout_height="100pt"
-        android:background="@color/gray" />
+        android:layout_marginStart="50pt"
+        android:layout_marginTop="20pt"
+        android:gravity="start|bottom"
+        android:text="@string/title"
+        android:textColor="@color/text_color_4"
+        android:textSize="50pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_content"
+        android:layout_width="900pt"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30pt"
+        android:layout_marginTop="30pt"
+        android:text="@string/content"
+        android:textColor="@color/text_color_3"
+        android:textSize="30pt"
+        app:layout_constraintStart_toStartOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/lpi_progress"
+        style="@style/ProgressBar"
+        android:layout_width="950pt"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40pt"
+        android:max="100"
+        android:theme="@style/ProgressBar"
+        app:layout_constraintStart_toStartOf="@id/tv_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_content" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30pt"
+        android:textColor="@color/text_color_3"
+        android:textSize="30pt"
+        app:layout_constraintBottom_toBottomOf="@id/lpi_progress"
+        app:layout_constraintStart_toEndOf="@id/lpi_progress"
+        app:layout_constraintTop_toTopOf="@id/lpi_progress" />
+
+    <cn.hades.tv.widget.button.TvButton
+        android:id="@+id/btn2"
+        android:layout_width="300pt"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60pt"
+        android:layout_marginBottom="70pt"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="@id/v_bg"
+        app:layout_constraintEnd_toEndOf="@id/v_bg" />
+
+    <cn.hades.tv.widget.button.TvButton
+        android:id="@+id/btn1"
+        android:layout_width="300pt"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60pt"
+        android:text="@string/ok"
+        app:layout_constraintBottom_toBottomOf="@id/btn2"
+        app:layout_constraintEnd_toStartOf="@id/btn2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
